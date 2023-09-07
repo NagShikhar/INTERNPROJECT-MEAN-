@@ -1,0 +1,31 @@
+<div class="container">
+  <div #editorContainer style="height: 500px; width: 100%;"></div>
+</div>
+
+<nav>
+  <div class="logo" routerLink="/home">designTEM</div>
+  <ul class="nav-links">
+    <li><a routerLink="/">Home</a></li>
+    
+  </ul>
+  <div *ngIf="username" class="user-info">
+    <span>Welcome, {{ username }}</span>
+    <button (click)="logout()">Logout</button>
+  </div>
+</nav>
+
+
+<script>
+  
+</script>
+
+<input type="text" [(ngModel)]="TemplateName" placeholder="Enter template name" class="input" />
+<div *ngIf="isTemplateNameEmpty"  class ="error-message"style="color: red;">Template name cannot be empty.</div>
+<button (click)="Previewrun()">Preview</button>
+
+<div class="button-container">
+  <button (click)="saveTemplate()">Save</button>
+  <button (click)=" publishTemplate()">Publish</button>
+</div>
+
+

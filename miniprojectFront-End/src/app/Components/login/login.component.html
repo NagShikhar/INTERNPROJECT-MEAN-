@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <nav>
+    <div class="logo">designTEM</div>
+    <ul class="nav-links">
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/registration">Sign Up</a></li>
+    </ul>
+  </nav>
+<div class="login-box">
+  <h2>Login</h2>
+ 
+  <form action="/login" method="post">
+    <div class="user-box">
+      <input type="text" placeholder="Email Address" [(ngModel)]="email" name="email">
+          <i class="icon fas fa-envelope"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+    </div>
+    <div class="user-box">
+      <input type="password" placeholder="Password" [(ngModel)]="password" name="password">
+          <i class="icon fas fa-lock"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+          
+    </div>
+    
+      <button type="button" (click)="login()">LOGIN</button>
+    
+    
+  </form>
+</div>
+
+</body>
+</html>

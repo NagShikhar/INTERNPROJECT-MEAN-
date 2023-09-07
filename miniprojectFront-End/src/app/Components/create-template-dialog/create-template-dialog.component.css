@@ -1,0 +1,66 @@
+
+
+/* Center the dialog box */
+.cdk-global-overlay-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Custom styles for the dialog container */
+  .mat-dialog-container {
+    width: 400px; /* Set the width of the dialog */
+    border-radius: 8px; /* Add border radius to make it square */
+    padding: 16px; /* Add some padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for a nice effect */
+    background-color: #fff; /* Set the background color */
+  }
+  
+  /* Custom styles for the mat-form-field and input inside the dialog */
+  .mat-form-field {
+    width: 100%; /* Set the width to fill the dialog */
+  }
+  
+  /* Custom styles for the OK and Cancel buttons inside the dialog */
+  .mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-top: 16px; /* Add some space between the content and buttons */
+  }
+  
+  .mat-button {
+    /* Your custom button styles here */
+    margin-left: 8px; /* Add some space between buttons */
+  }
+/* create-template-dialog-custom-styles.css */
+
+/* Custom styles for buttons inside the dialog */
+::ng-deep .mat-button {
+    /* Your custom styles here */
+    border-radius: .25rem;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: #fff;
+    -webkit-clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
+    clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
+    height: 40px;
+    font-size: 0.7rem;
+    line-height: 14px;
+    letter-spacing: 1.2px;
+    transition: .2s .1s;
+    background-image: linear-gradient(90deg,#1c1c1c,#4070f4);
+    border: 0 solid;
+    overflow: hidden;
+  }
+  
+  ::ng-deep .mat-button:hover {
+    /* Your custom styles here */
+    cursor: pointer;
+    transition: all .3s ease-in;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+    

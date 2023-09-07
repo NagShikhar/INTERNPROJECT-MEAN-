@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home page </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  
+    <nav>
+        <div class="logo">designTEM</div>
+        <ul class="nav-links">
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/login">Login</a></li>
+        </ul>
+      </nav>
+  
+  <main>
+    <div class="intro">
+      <h1>DesigTEM</h1>
+      <p> One stop solution to create and manage your HTML Templates</p>
+      <button routerLink="/registration">JOIN US </button>
+    </div>
+    <div class="achievements">
+        <div class="heading-container">
+            <h4 class="heading">Features</h4>
+            <div class="content">
+         
+            </div>
+          </div>
+          
+      <div class="work">
+        <i class="fas fa-file"></i>
+        <p class="work-heading">create</p>
+        <p class="work-text">User can create a HTML template by writing code in ace-editor that has been provided by the angular.</p>
+      </div>
+      <div class="work">
+        <i class="fas fa-edit"></i>
+        <p class="work-heading">edit&delete</p>
+        <p class="work-text"> Use can edit and delete the HTML template according to its need.</p>
+      </div>
+      <div class="work">
+        <i class="fas fa-save"></i>
+        <p class="work-heading">Save&publish</p>
+        <p class="work-text">User when save it store it locally in a file and publish HTML template it save the output in mongodb and also manitain version history of templtes and whenever it publish the mail has been send to the user. </p>
+      </div>
+    </div>
+    <div class="about-me">
+      <div class="about-me-text">
+        <h2 class="heading">About Us</h2>
+        <p>We help user to create and manage their HTML templates for free.</p>
+      </div>
+      
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="copy">© 2023 BY designTEM</div>
+    <div class="bottom-links">
+      <div class="links">
+        <span>More Info</span>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="links">
+        <span>Social Links</span>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

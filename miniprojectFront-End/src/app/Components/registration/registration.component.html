@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+  <nav>
+    <div class="logo">designTEM</div>
+    <ul class="nav-links">
+      <li><a routerLink="/">Home</a></li>
+      
+      <li><a routerLink="/login">login</a></li>
+    </ul>
+  </nav>
+
+  <div class="wrapper rounded-lg p-4">
+    <h2>Registration</h2>
+    <form [formGroup]="registrationForm" (ngSubmit)="register()">
+      <div class="form-group">
+        <input type="text" class="form-control" id="username" formControlName="username" placeholder="ENTER YOUR USERNAME">
+        <div *ngIf="registrationForm.get('username')?.touched && registrationForm.get('username')?.invalid" class="text-danger">
+          <span *ngIf="registrationForm.get('username')?.errors?.['required']">Username is required.</span>
+          <span *ngIf="registrationForm.get('username')?.errors?.['minlength']">Username must be at least 4 characters long.</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="email" formControlName="email" placeholder="ENTER YOUR EMAIL">
+        <div *ngIf="registrationForm.get('email')?.touched && registrationForm.get('email')?.invalid" class="text-danger">
+          <span *ngIf="registrationForm.get('email')?.errors?.['required']">Email is required.</span>
+          <span *ngIf="registrationForm.get('email')?.errors?.['email']">Invalid email format.</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="password" formControlName="password" placeholder="CREATE PASSWORD">
+        <div *ngIf="registrationForm.get('password')?.touched && registrationForm.get('password')?.invalid" class="text-danger">
+          <span *ngIf="registrationForm.get('password')?.errors?.['required']">Password is required.</span>
+          <span *ngIf="registrationForm.get('password')?.errors?.['minlength']">Password must be at least 4 characters long.</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="confirmpassword" formControlName="confirmpassword" placeholder="CONFIRM PASSWORD">
+        <div *ngIf="registrationForm.get('confirmpassword')?.touched && registrationForm.get('confirmpassword')?.invalid" class="text-danger">
+          <span *ngIf="registrationForm.get('confirmpassword')?.errors?.['required']">Confirm Password is required.</span>
+          <span *ngIf="registrationForm.get('confirmpassword')?.errors?.['passwordMismatch']">Passwords do not match.</span>
+        </div>
+      </div>
+      <div class="policy">
+        <input type="checkbox" formControlName="acceptTerms">
+        <h3>I accept all terms &amp; conditions</h3>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="registrationForm.invalid">Submit</button>
+      <div class="text">
+        <h3>Already have an account? <a routerLink="/login">Login now</a></h3>
+      </div>
+    </form>
+  </div>
+  
+
+  
+</body>
+
+  
+</html>
